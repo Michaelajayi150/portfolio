@@ -1,38 +1,189 @@
 .App {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.headings {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+/* Left Side */
+.left {
+  width: 30%;
+  padding: 20px 30px;
+  position: relative;
+  background-color: #1a1b1d;
+  z-index: -3;
+}
+
+.left .dev-desc {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dev-desc .dev-name {
+  font-size: 90px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dev-desc .job-label {
+  transform: translateY(-17px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dev-desc .job-label-tag {
+  padding: 10px 15px;
+  background-color: #f3c600;
+}
+
+.left .dev-education {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.left .dev-education .education-ongoing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.sc-one {
+  margin-bottom: 30px;
+}
+
+.expertise, .contact {
+  position: relative;
+  background-color: #ebebeb;
+  padding: 20px 30px;
+  left: -30px;
+  width: 100%;
+}
+
+.expertise .expertise-lang {
+  text-transform: uppercase;
+}
+
+.lang-expert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.lang-expert .progress-bar {
+  position: relative;
+  width: 200px;
+  height: 7px;
+  background-color: #1a1b1d;
+  border-radius: 3px;
+}
+
+.lang-expert.html .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: calc(200px * 0.9);
+  height: 7px;
+  background-color: #f3c600;
+}
+.lang-expert.css .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: calc(200px * 0.7);
+  height: 7px;
+  background-color: #f3c600;
+}
+.lang-expert.sass .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: calc(200px * 0.65);
+  height: 7px;
+  background-color: #f3c600;
+}
+.lang-expert.js .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: calc(200px * 0.8);
+  height: 7px;
+  background-color: #f3c600;
+}
+.lang-expert.react .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: calc(200px * 0.8);
+  height: 7px;
+  background-color: #f3c600;
+}
+.lang-expert.node .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: calc(200px * 0.7);
+  height: 7px;
+  background-color: #f3c600;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  z-index: -2;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  text-align: left;
+}
+
+.contact-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f3c600;
+  padding: 12px;
+  width: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-icons::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 200px;
+  padding: 12px;
+  z-index: -1;
+  background-color: #f3c600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contact-icons .icon {
+  color: #1a1b1d;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.contact-items .item {
+  text-decoration: none;
+  color: #1a1b1d;
+  margin: 5px 0;
+}
+
+/* Right Side */
+.right {
+  width: 70%;
+  background-color: #ebebeb;
+  padding: 20px 80px;
+}
+
+.dev-profile p {
+  color: #9e9e9e;
+}
+
+.dev-projects {
+  background-color: #fff;
+  position: relative;
+  padding: 20px 80px;
+  left: -80px;
+  width: 100%;
 }
