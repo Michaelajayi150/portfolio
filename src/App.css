@@ -12,8 +12,8 @@
 
 /* Left Side */
 .left {
-  width: 30vw;
-  /* padding: 20px 30px; */
+  width: 40vw;
+  padding: 2px 6px 0;
   position: relative;
   background-color: #1a1b1d;
   z-index: -3;
@@ -57,9 +57,9 @@
 .expertise, .contact {
   position: relative;
   background-color: #ebebeb;
-  padding: 1px 5px;
-  left: 0px;
-  width: calc(100% - 10px);
+  padding: 1px 12px;
+  left: -6px;
+  width: 100%;
 }
 
 .expertise .expertise-lang {
@@ -160,9 +160,11 @@
 
 /* Right Side */
 .right {
-  width: 70vw;
+  width: 60vw;
+  position: relative;
   background-color: #ebebeb;
   padding: 3px 15px;
+  z-index: -4;
 }
 
 .dev-profile p {
