@@ -1,19 +1,19 @@
 .App {
   display: flex;
   justify-content: center;
-  max-width: 1200px;
+  width: 100vw;
   margin: auto;
 }
 
 .headings {
-  font-size: 23px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 
 /* Left Side */
 .left {
-  width: 30%;
-  padding: 20px 30px;
+  width: 30vw;
+  /* padding: 20px 30px; */
   position: relative;
   background-color: #1a1b1d;
   z-index: -3;
@@ -24,7 +24,7 @@
 }
 
 .dev-desc .dev-name {
-  font-size: 90px;
+  font-size: 23px;
 }
 
 .dev-desc .job-label {
@@ -32,14 +32,14 @@
 }
 
 .dev-desc .job-label-tag {
-  padding: 10px 15px;
+  font-size: 10px;
+  padding: 1px 5px;
   background-color: #f3c600;
 }
 
 .left .dev-education {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 20px;
+  font-size: 10px;
+  padding: 5px;
   color: #fff;
 }
 
@@ -47,7 +47,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 
 .sc-one {
@@ -57,9 +57,9 @@
 .expertise, .contact {
   position: relative;
   background-color: #ebebeb;
-  padding: 20px 30px;
-  left: -30px;
-  width: 100%;
+  padding: 1px 5px;
+  left: 0px;
+  width: calc(100% - 10px);
 }
 
 .expertise .expertise-lang {
@@ -73,55 +73,42 @@
   position: relative;
 }
 
+.lang-framework {
+  font-size: 10px;
+}
+
 .lang-expert .progress-bar {
   position: relative;
-  width: 200px;
-  height: 7px;
+  width: 50%;
+  height: 2px;
   background-color: #1a1b1d;
   border-radius: 3px;
 }
 
-.lang-expert.html .progress-bar::before {
+.lang-expert .progress-bar::before {
   position: absolute;
   content: "";
-  width: calc(200px * 0.9);
-  height: 7px;
+  height: 2px;
   background-color: #f3c600;
+}
+
+.lang-expert.html .progress-bar::before {
+  width: calc(50% * 0.9);
 }
 .lang-expert.css .progress-bar::before {
-  position: absolute;
-  content: "";
-  width: calc(200px * 0.7);
-  height: 7px;
-  background-color: #f3c600;
+  width: calc(50% * 0.7);
 }
 .lang-expert.sass .progress-bar::before {
-  position: absolute;
-  content: "";
-  width: calc(200px * 0.65);
-  height: 7px;
-  background-color: #f3c600;
+  width: calc(50% * 0.65);
 }
 .lang-expert.js .progress-bar::before {
-  position: absolute;
-  content: "";
-  width: calc(200px * 0.8);
-  height: 7px;
-  background-color: #f3c600;
+  width: calc(50% * 0.8);
 }
 .lang-expert.react .progress-bar::before {
-  position: absolute;
-  content: "";
-  width: calc(200px * 0.8);
-  height: 7px;
-  background-color: #f3c600;
+  width: calc(50% * 0.8);
 }
 .lang-expert.node .progress-bar::before {
-  position: absolute;
-  content: "";
-  width: calc(200px * 0.7);
-  height: 7px;
-  background-color: #f3c600;
+  width: calc(50% * 0.7);
 }
 
 .contact {
@@ -133,7 +120,7 @@
 .contact-items {
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding: 5px;
   text-align: left;
 }
 
@@ -142,48 +129,51 @@
   flex-direction: column;
   align-items: center;
   background-color: #f3c600;
-  padding: 12px;
-  width: 30px;
+  padding: 9px;
+  width: 5px;
 }
 
 .contact-icons::after {
   position: absolute;
   content: "";
-  width: 30px;
-  height: 200px;
-  padding: 12px;
+  width: 5px;
+  height: 20px;
+  padding: 9px;
   z-index: -1;
   background-color: #f3c600;
 }
 
 .contact-icons .icon {
   color: #1a1b1d;
-  font-size: 18px;
+  font-size: 10px;
   cursor: pointer;
   margin: 10px auto;
 }
 
 .contact-items .item {
+  width: 100px;
   text-decoration: none;
+  font-size: 10px;
   color: #1a1b1d;
   margin: 5px 0;
 }
 
 /* Right Side */
 .right {
-  width: 70%;
+  width: 70vw;
   background-color: #ebebeb;
-  padding: 20px 80px;
+  padding: 3px 15px;
 }
 
 .dev-profile p {
+  font-size: .5rem;
   color: #9e9e9e;
 }
 
 .dev-projects {
   background-color: #fff;
   position: relative;
-  padding: 20px 80px;
-  left: -80px;
+  padding: 3px 15px;
+  left: -15px;
   width: 100%;
 }
