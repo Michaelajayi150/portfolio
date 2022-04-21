@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap-v5";
 import Image from "./dev-image.jpg";
+import "./hero.css";
 
 function HeroSection() {
   return (

@@ -2,84 +2,9 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .App {
   background-color: #e3e3e3;
-}
-
-.navbar-expand .header-contact.navbar-nav {
-  margin-top: 72px;
-}
-
-.header-contact .contact-icons {
-  font-size: 17px;
-  margin: 4px 6px;
-  transform: translateY(-10px)
-}
-
-.navbar-brand h1 {
-  display: inline-flex;
-  transform: translateY(4px);
-}
-
-/* Hero Section */
-.hero-section {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.hero-container {
-  background-color: #fff;
-}
-
-.hero-content .hero-text {
-  margin: 30px auto;
-  font-size: 1.3rem;
-  padding: 4px 10px;
-}
-
-.hero-content .hero-text {
-  text-transform: uppercase;
-  position: relative;
-}
-
-.hero-content .hero-text .dev-name {
-  font-size: 4rem;
-  font-weight: bolder;
-}
-
-.hero-content .hero-text .hero-p {
-  margin: 20px auto;
-  text-transform: none;
-}
-
-@media screen and (min-width: 768px) {
-  .hero-section {
-    padding-top: 60px;
-  }
-
-  .hero-section .hero-bg {
-    width: 100%;
-    filter: blur(10px);
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-  }
-
-  .hero-container {
-    position: relative;
-    width: 85%;
-    margin: auto;
-    padding: 20px 60px;
-    z-index: 2;
-    border-radius: 20px;
-    box-shadow: 0px 6px 15px 4px rgba(41, 41, 41, 0.7);
-  }
-
-  .hero-container .dev-image img {
-    border-radius: 20px 20px 0 0;
-  }
 }
