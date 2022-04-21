@@ -13,7 +13,7 @@
 
 .about-content .about-cards .about-card-item {
   background: linear-gradient(to bottom, #e72c83, #a742c6);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
