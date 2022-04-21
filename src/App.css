@@ -1,181 +1,85 @@
-.App {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  margin: auto;
-}
-
-.headings {
-  font-size: 13px;
-  text-transform: uppercase;
-}
-
-/* Left Side */
-.left {
-  width: 40vw;
-  padding: 2px 6px 0;
-  position: relative;
-  background-color: #1a1b1d;
-  z-index: -3;
-}
-
-.left .dev-desc {
-  text-align: center;
-}
-
-.dev-desc .dev-name {
-  font-size: 23px;
-}
-
-.dev-desc .job-label {
-  transform: translateY(-17px);
-}
-
-.dev-desc .job-label-tag {
-  font-size: 10px;
-  padding: 1px 5px;
-  background-color: #f3c600;
-}
-
-.left .dev-education {
-  font-size: 10px;
-  padding: 5px;
-  color: #fff;
-}
-
-.left .dev-education .education-ongoing {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 10px 0;
-}
-
-.sc-one {
-  margin-bottom: 30px;
-}
-
-.expertise, .contact {
-  position: relative;
-  background-color: #ebebeb;
-  padding: 1px 12px;
-  left: -6px;
-  width: 100%;
-}
-
-.expertise .expertise-lang {
-  text-transform: uppercase;
-}
-
-.lang-expert {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.lang-framework {
-  font-size: 10px;
-}
-
-.lang-expert .progress-bar {
-  position: relative;
-  width: 50%;
-  height: 2px;
-  background-color: #1a1b1d;
-  border-radius: 3px;
-}
-
-.lang-expert .progress-bar::before {
-  position: absolute;
-  content: "";
-  height: 2px;
-  background-color: #f3c600;
-}
-
-.lang-expert.html .progress-bar::before {
-  width: calc(50% * 0.9);
-}
-.lang-expert.css .progress-bar::before {
-  width: calc(50% * 0.7);
-}
-.lang-expert.sass .progress-bar::before {
-  width: calc(50% * 0.65);
-}
-.lang-expert.js .progress-bar::before {
-  width: calc(50% * 0.8);
-}
-.lang-expert.react .progress-bar::before {
-  width: calc(50% * 0.8);
-}
-.lang-expert.node .progress-bar::before {
-  width: calc(50% * 0.7);
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  z-index: -2;
-}
-
-.contact-items {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  text-align: left;
-}
-
-.contact-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #f3c600;
-  padding: 9px;
-  width: 5px;
-}
-
-.contact-icons::after {
-  position: absolute;
-  content: "";
-  width: 5px;
-  height: 20px;
-  padding: 9px;
-  z-index: -1;
-  background-color: #f3c600;
-}
-
-.contact-icons .icon {
-  color: #1a1b1d;
-  font-size: 10px;
-  cursor: pointer;
-  margin: 10px auto;
-}
-
-.contact-items .item {
-  width: 100px;
+* {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
-  font-size: 10px;
-  color: #1a1b1d;
-  margin: 5px 0;
 }
 
-/* Right Side */
-.right {
-  width: 60vw;
-  position: relative;
-  background-color: #ebebeb;
-  padding: 3px 15px;
-  z-index: -4;
+.App {
+  background-color: #e3e3e3;
 }
 
-.dev-profile p {
-  font-size: .5rem;
-  color: #9e9e9e;
+.navbar-expand .header-contact.navbar-nav {
+  margin-top: 72px;
 }
 
-.dev-projects {
+.header-contact .contact-icons {
+  font-size: 17px;
+  margin: 4px 6px;
+  transform: translateY(-10px)
+}
+
+.navbar-brand h1 {
+  display: inline-flex;
+  transform: translateY(4px);
+}
+
+/* Hero Section */
+.hero-section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container {
   background-color: #fff;
+}
+
+.hero-content .hero-text {
+  margin: 30px auto;
+  font-size: 1.3rem;
+  padding: 4px 10px;
+}
+
+.hero-content .hero-text {
+  text-transform: uppercase;
   position: relative;
-  padding: 3px 15px;
-  left: -15px;
-  width: 100%;
+}
+
+.hero-content .hero-text .dev-name {
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.hero-content .hero-text .hero-p {
+  margin: 20px auto;
+  text-transform: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-top: 60px;
+  }
+
+  .hero-section .hero-bg {
+    width: 100%;
+    filter: blur(10px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  .hero-container {
+    position: relative;
+    width: 85%;
+    margin: auto;
+    padding: 20px 60px;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px 4px rgba(41, 41, 41, 0.7);
+  }
+
+  .hero-container .dev-image img {
+    border-radius: 20px 20px 0 0;
+  }
 }

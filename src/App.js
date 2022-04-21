@@ -1,12 +1,13 @@
 import "./App.css";
-import LeftApp from "./components/leftComponents/leftApp";
-import RightApp from "./components/rightComponents/rightApp";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   return (
     <div className="App">
-      <LeftApp />
-      <RightApp />
+      <Header />
+      <HeroSection />
     </div>
   );
 }
