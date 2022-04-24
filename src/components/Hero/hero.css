@@ -16,7 +16,7 @@
 
 .hero-content .hero-text {
   margin: 30px auto 0;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
   padding: 4px 10px;
 }
 
@@ -47,6 +47,7 @@
     position: absolute;
     top: 0;
     z-index: 1;
+    background: linear-gradient(45deg, rgb(255, 60, 60), rgb(59, 223, 245));
   }
 
   .hero-container {

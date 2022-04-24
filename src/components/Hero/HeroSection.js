@@ -9,7 +9,7 @@ function HeroSection() {
       <div className="hero-section">
         <div
           className="hero-bg"
-          style={{ backgroundImage: `url(${Image})` }}
+          // style={{ backgroundImage: `url(${Image})` }}
         ></div>
         <div className="hero-container">
           <div className="dev-image">
