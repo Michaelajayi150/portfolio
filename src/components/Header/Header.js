@@ -57,16 +57,25 @@ function Header() {
       <Navbar bg="light" variant="light">
         <Container>
           <Nav className="me-auto header-contact">
-            <Nav.Link href="#home">
+            <Nav.Link
+              href="https://www.instagram.com/the_dev.io/"
+              target="_blank"
+            >
               <BsIcons.BsInstagram />
             </Nav.Link>
-            <Nav.Link href="#link">
+            <Nav.Link
+              href="https://twitter.com/Michaelajayi150"
+              target="_blank"
+            >
               <BsIcons.BsTwitter />
             </Nav.Link>
-            <Nav.Link href="#link">
+            <Nav.Link
+              href="https://www.linkedin.com/in/ajayi-michael-692bb6203/"
+              target="_blank"
+            >
               <BsIcons.BsLinkedin />
             </Nav.Link>
-            <Nav.Link href="#link">
+            <Nav.Link href="mailto: ajayimichael150@gmail.com" target="_blank">
               <FiIcons.FiMail />
             </Nav.Link>
           </Nav>

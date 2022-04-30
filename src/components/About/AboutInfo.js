@@ -1,26 +1,27 @@
 import React from "react";
-import * as DiIcons from "react-icons/di";
+import * as GiIcons from "react-icons/gi";
+import * as GrIcons from "react-icons/gr";
 
 export const AboutData = [
   {
     aboutText:
-      "Amet adipisicing reprehenderit cupidatat do velit occaecat laborum exercitation reprehenderit aute irure. Tempor quis quis consequat consectetur exercitation do minim ut id et cillum ex ea incididunt. Esse reprehenderit sit aute proident pariatur velit magna laboris.",
+      "I was born and raised in Nigeria, I also studied in Nigeria. I love listening to music, playing video games and making techonlogical research. I have been certified by more than four prrogramming institution online (FreeCodeCamp, Pluralsight and Google). I also help the programming community by creating web templates and putting them out for free, I also help other developer in answering question on Stackoverflow and other programming communtity platforms like Slack.",
 
     aboutTag: [
       {
-        icon: <DiIcons.DiRedhat size="3rem" />,
+        icon: <GiIcons.GiGamepad size="3rem" />,
         text: "Interest",
         info: "Listening to Music, Playing Video games, Techonlogical Research",
       },
       {
-        icon: <DiIcons.DiRedhat size="3rem" />,
+        icon: <GrIcons.GrCertificate size="2.5rem" />,
         text: "Certification",
         info: "Certified by FreeCodeCamp, Pluralsight and Google",
       },
       {
-        icon: <DiIcons.DiRedhat size="3rem" />,
+        icon: <GrIcons.GrAchievement size="2.5rem" />,
         text: "Achievement",
-        info: "Aliqua in duis culpa cupidatat deserunt reprehed.",
+        info: "Successfully deployed 10+ React web apps",
       },
     ],
 

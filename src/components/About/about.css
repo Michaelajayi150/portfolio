@@ -26,7 +26,8 @@
   padding: 10px 15px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(#e72c83, #5a5a5a);
+  color: #000;
+  background: linear-gradient(45deg, rgb(255, 60, 60), rgb(59, 223, 245));
   background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 1px solid #5a5a5a;
@@ -34,7 +35,7 @@
 }
 
 .about-cards .about-card-item b {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 

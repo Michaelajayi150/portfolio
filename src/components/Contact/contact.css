@@ -1,0 +1,53 @@
+.contact-section {
+  background-color: #fff;
+}
+
+.contact-section .contact-container {
+  padding: 40px 5px;
+}
+
+.contact-section .contact-container .section-topic {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.contact-section .contact-container .text-content-header {
+  text-align: center;
+}
+
+.contact-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container .contact-form input, .contact-container .contact-form textarea {
+  padding: 10px;
+  width: 100%;
+  max-width: 1024px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+#text-box {
+  height: 150px;
+  overflow: visible;
+}
+
+.form-btn {
+  margin: 15px auto;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.4s ease-in;
+}
+
+.form-btn:hover {
+  color: #000;
+  background-color: transparent;
+}
