@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 .App {
-  background-color: #e3e3e3;
+  background-color: #fff;
 }

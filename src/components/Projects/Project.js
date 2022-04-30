@@ -29,6 +29,7 @@ function Project() {
 
   return (
     <div
+      id="project"
       className="project-section"
       style={{
         backgroundImage: `url(${bgImage}), linear-gradient(45deg, #eb01a5, #d13531)`,
@@ -45,7 +46,7 @@ function Project() {
             Web Site and Application
           </h1>
           <p>
-            Eu amet ullamco pariatur ea culpa tempor <br /> Eu amet ullamco.
+            Beautiful sites with code simplicity <br /> You'd love it.
           </p>
           <div>
             <span className="btn check-project">Check Out Some</span>

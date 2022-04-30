@@ -1,9 +1,13 @@
 
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 3;
 }
 
+.header-contact {
+  margin-top: 70px;
+}
 
 .navbar-dark .navbar-nav .nav-link {
   color: rgb(255,255,255);
@@ -18,13 +22,9 @@
 
 @keyframes fixed {
   0% {
-    width: 100%;
-    position: fixed;
     top: -50px;
   }
   100% {
-    width: 100%;
-    position: fixed;
     top: 0;
   }
 }

@@ -35,56 +35,56 @@ export const AboutData = [
 
     Experiences: [
       {
-        year: "April 20, 2001",
+        year: "May 17, 2020",
         company: "Hello World Hub",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
+        info: "Started my first programming career with Hello World Hub, assisted in the development of their official website",
       },
       {
-        year: "April 20, 2001",
+        year: "May 17, 2020",
+        company: "FreeCodeCamp",
+        info: "Started learning programming with Freecodecamp learning platform, got my FreeCodeCamp certificate",
+      },
+      {
+        year: "June 1, 2020",
+        company: "HNDi8",
+        info: "Participated in the HNDi8 internship program, was eliminated in the late stages",
+      },
+      {
+        year: "April 20, 2022",
         company: "LA Draws",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
+        info: "Created a portfolio website for LA Draws while working as a freelancer.",
       },
       {
-        year: "April 20, 2001",
+        year: "April 30, 2022",
         company: "TheDev",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
-      },
-      {
-        year: "April 20, 2001",
-        company: "HNDi10",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
-      },
-      {
-        year: "April 20, 2001",
-        company: "HNDi08",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
+        info: "Fully finished my portfolio website after completing getting my FreeCodeCamp certificate.",
       },
     ],
     Education: [
       {
-        company: "HNDi08",
-        year: "April 20, 2021",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
-      },
-      {
-        company: "HNDi10",
-        year: "April 20, 2021",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
-      },
-      {
-        company: "TheDev",
-        year: "April 20, 2021",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
-      },
-      {
+        year: "May 17, 2020",
         company: "Hello World Hub",
-        year: "April 20, 2021",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
+        info: "Started my first programming career with Hello World Hub, assisted in the development of their official website.",
       },
       {
-        company: "LA Draws",
-        year: "April 20, 2021",
-        info: "Consectetur sint elit sunt mollit proident laboris deserunt sint aliquip quis laborum ex sint anim.",
+        year: "May 17, 2020",
+        company: "FreeCodeCamp",
+        info: "Started learning Web development with FreeCodeCamp learning platform.",
+      },
+      {
+        year: "June 1, 2020",
+        company: "HNDi8",
+        info: "Participated in the HNDi8 internship program, was eliminated in the late stages",
+      },
+      {
+        company: "Pluralsight",
+        year: "October 12, 2020",
+        info: "Started learning Web development on pluralsight learning platform.",
+      },
+      {
+        company: "Federal University Of Akure",
+        year: "November 21, 2021",
+        info: "Learning Computer Science as a course at Federal University of Akure.",
       },
     ],
   },

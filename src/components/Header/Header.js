@@ -34,8 +34,8 @@ function Header() {
           >
             <Nav className="me-2">
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-              <Nav.Link href="#pricing">Services</Nav.Link>
+              <Nav.Link href="#skill">About</Nav.Link>
+              <Nav.Link href="#project">Services</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
               <NavDropdown title="Project" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -54,7 +54,7 @@ function Header() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Navbar bg="light" variant="light">
+      <Navbar id="home" bg="light" variant="light">
         <Container>
           <Nav className="me-auto header-contact">
             <Nav.Link
