@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path="/"
+          path="/portfolio"
           element={
             <>
               <HeroSection />
