@@ -49,9 +49,9 @@ function About() {
                     </div>
 
                     <div className="about-cards">
-                      {key.aboutTag.map((cardItem) => {
+                      {key.aboutTag.map((cardItem, index) => {
                         return (
-                          <div className="about-card-item">
+                          <div key={index + 1} className="about-card-item">
                             {cardItem.icon}
                             <b>{cardItem.text}</b>
                             <p>{cardItem.info}</p>
@@ -64,7 +64,10 @@ function About() {
                   <div ref={ref} className={Animate}>
                     {key.aboutSkill.map((cardItem, index) => {
                       return (
-                        <div className={`about-skills-item skill-${index}`}>
+                        <div
+                          key={index + 1}
+                          className={`about-skills-item skill-${index}`}
+                        >
                           <b>{cardItem.tag}</b>
                           <div className="skill-range">
                             <div className="skill-range-item">

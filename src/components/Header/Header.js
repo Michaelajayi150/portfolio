@@ -24,7 +24,7 @@ function Header() {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/#home">
             <DiIcons.DiCssdeck size="3rem" /> <h1>DEV.IO</h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -33,10 +33,10 @@ function Header() {
             className="justify-content-end"
           >
             <Nav className="me-2">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#skill">About</Nav.Link>
-              <Nav.Link href="#project">Services</Nav.Link>
-              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="/#home">Home</Nav.Link>
+              <Nav.Link href="/#skill">About</Nav.Link>
+              <Nav.Link href="/#project">Services</Nav.Link>
+              <Nav.Link href="/#contact">Contact</Nav.Link>
               <NavDropdown title="Project" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">

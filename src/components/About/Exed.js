@@ -3,9 +3,9 @@ import React from "react";
 const Exed = ({ keyProp }) => {
   return (
     <>
-      {keyProp.map((key) => {
+      {keyProp.map((key, index) => {
         return (
-          <div className="exed-data-item">
+          <div key={index + 1} className="exed-data-item">
             <span></span>
             <div className="exed-date">{key.year}</div>
             <div className="exed-info">

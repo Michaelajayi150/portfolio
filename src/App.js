@@ -6,15 +6,27 @@ import About from "./components/About/About";
 import Project from "./components/Projects/Project";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import ProjectSection from "./components/Projects/ProjectSection";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <HeroSection />
-      <About />
-      <Project />
-      <Contact />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <HeroSection />
+              <About />
+              <Project />
+              <Contact />
+            </>
+          }
+        />
+        <Route path="/projects" element={<ProjectSection />} />
+      </Routes>
       <Footer />
     </div>
   );

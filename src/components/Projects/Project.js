@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { Container } from "react-bootstrap-v5";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 import bgImage from "./bg-one.jpg";
 import "./project.css";
 import { ProjectInfo } from "./ProjectInfo";
-// import bgImage2 from "./bg-two.jpeg";
 
 function Project() {
   const { ref, inView, entry } = useInView();
@@ -48,9 +48,9 @@ function Project() {
           <p>
             Beautiful sites with code simplicity <br /> You'd love it.
           </p>
-          <div>
+          <Link to="projects">
             <span className="btn check-project">Check Out Some</span>
-          </div>
+          </Link>
         </div>
       </Container>
     </div>
