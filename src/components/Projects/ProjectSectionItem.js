@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ProjectSectionItem({ prop }) {
   return (
-    <div id="ongoing" className="latest-card">
+    <div id={prop.name} className="latest-card">
       <h2>{prop.heading}</h2>
       <h5>{prop.quote}</h5>
       <div className="card-container">

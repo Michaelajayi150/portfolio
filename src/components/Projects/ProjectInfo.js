@@ -13,16 +13,19 @@ export const ProjectInfo = [
     ProjectItem: [
       {
         item: LatestProject,
+        name: "lastest",
         heading: "Recent Projects",
         quote: "Excellence is not a skill, it's an attitude.",
       },
       {
         item: OngoingProject,
+        name: "ongoing",
         heading: "Ongoing Projects",
         quote: "A little progress each day adds up to big results.",
       },
       {
         item: StaticProject,
+        name: "static",
         heading: "Snippet and Landing Page Projects",
         quote: "You'll be amazed how your business got by without them!",
       },

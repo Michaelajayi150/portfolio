@@ -48,7 +48,7 @@ function Project() {
           <p>
             Beautiful sites with code simplicity <br /> You'd love it.
           </p>
-          <Link to="projects/#hero">
+          <Link to="projects">
             <span className="btn check-project">Check Out Some</span>
           </Link>
         </div>

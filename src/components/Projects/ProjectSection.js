@@ -9,13 +9,13 @@ function ProjectSection() {
     <div className="project-card-section">
       {ProjectInfo.map((key, i) => {
         return (
-          <div id="hero" key={i}>
+          <div key={i}>
             <div
               className="project-bg"
               style={{ backgroundImage: `url(${bgImage2})` }}
             ></div>
             <Container>
-              <div className="project-hero">
+              <div id="hero" className="project-hero">
                 <h1>Welcome to My Projects</h1>
                 <p>I build awesome websites with simple code</p>
                 <div className="btn form-btn pro-btn">
