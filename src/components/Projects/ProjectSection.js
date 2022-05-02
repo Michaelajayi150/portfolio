@@ -2,9 +2,7 @@ import { Container, NavLink } from "react-bootstrap-v5";
 import bgImage2 from "./project-images/bg-project.jpeg";
 import "./project.css";
 import { ProjectInfo } from "./ProjectInfo";
-import Ongoing from "./Sections/Ongoing";
-import Recent from "./Sections/Recent";
-import Static from "./Sections/Static";
+import ProjectSectionItem from "./ProjectSectionItem";
 
 function ProjectSection() {
   return (
@@ -24,9 +22,9 @@ function ProjectSection() {
                   <NavLink href="#latest">Get Started</NavLink>
                 </div>
               </div>
-              <Recent prop={key} />
-              <Ongoing prop={key} />
-              <Static prop={key} />
+              {key.ProjectItem.map((item) => {
+                return <ProjectSectionItem prop={item} />;
+              })}
             </Container>
           </div>
         );

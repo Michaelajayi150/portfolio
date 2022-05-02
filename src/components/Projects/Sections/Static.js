@@ -1,55 +1,35 @@
-import { NavLink } from "react-bootstrap-v5";
-import * as BsIcons from "react-icons/bs";
+// Static Thumbs
+import BeautyThumb from "../project-images/beauty.png";
+import TanyaThumb from "../project-images/tanya-tucker.png";
+import WeatherThumb from "../project-images/weather-check.png";
 
-function Static({ prop }) {
-  return (
-    <div id="static" className="latest-card">
-      <h2>Snippet and Landing Page Projects</h2>
-      <h5>You'll be amazed how your business got by without them!</h5>
-      <div className="card-container">
-        {prop.StaticProject.map((i, index) => {
-          return (
-            <div key={index + 1} className="project-card">
-              <div className="image">
-                <img src={i.image} alt={i.imageAlt} />
-                <NavLink href={i.url} target="_blank">
-                  <div className="image-gradient">
-                    <BsIcons.BsGlobe2 size="3rem" />
-                  </div>
-                </NavLink>
-              </div>
-              <div className="card-title">
-                <h5>{i.name}</h5>
-                <hr />
-              </div>
-              <div className="card-info">
-                {i.about}
-                <h5>STACK</h5>
-                <hr />
-                <div className="stacks">
-                  {i.stack.map((key, id) => {
-                    return (
-                      <div key={id} className="stack-tag">
-                        {key.tag}
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="utility">
-                  <div className="btn form-btn pro-btn">Code</div>
-                  <div className="btn form-btn clash">
-                    <NavLink href={i.url} target="_blank">
-                      Live Demo
-                    </NavLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-export default Static;
+// Static Projects
+export const StaticProject = [
+  {
+    image: `${BeautyThumb}`,
+    imageAlt: "A beauty website",
+    url: "https://beauty-beta-newavengers.netlify.app/",
+    name: "Glam Haven",
+    about:
+      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+    stack: [{ tag: "CSS" }, { tag: "JavaScript" }, { tag: "HTML" }],
+  },
+  {
+    image: `${WeatherThumb}`,
+    imageAlt: "A weather checker website",
+    url: "https://javascript-challenge-test.netlify.app/",
+    name: "Weather Checker",
+    about:
+      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+    stack: [{ tag: "Snippet" }, { tag: "APIs" }, { tag: "JavaScript" }],
+  },
+  {
+    image: `${TanyaThumb}`,
+    imageAlt: "Tanya Tucker Portfolio",
+    url: "https://confident-visvesvaraya-960f42.netlify.app/",
+    name: "Tanya Tucker Portfolio",
+    about:
+      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+    stack: [{ tag: "CSS" }, { tag: "JavaScript" }, { tag: "React JS" }],
+  },
+];

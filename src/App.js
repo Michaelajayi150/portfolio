@@ -8,6 +8,7 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import ProjectSection from "./components/Projects/ProjectSection";
+import Error from "./components/Error/Error";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           }
         />
         <Route path="/portfolio/projects" element={<ProjectSection />} />
+        <Route path="/portfolio/error" element={<Error />} />
       </Routes>
       <Footer />
     </div>

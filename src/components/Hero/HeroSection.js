@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Nav } from "react-bootstrap-v5";
+import { Container, Nav, NavLink } from "react-bootstrap-v5";
 import Image from "./dev-image.jpg";
 import * as BsIcons from "react-icons/bs";
 import * as FiIcons from "react-icons/fi";
+import CV from "./My_CV.docx";
 import "./hero.css";
 
 function HeroSection() {
@@ -65,7 +66,11 @@ function HeroSection() {
                   </Nav.Link>
                 </Nav>
                 <div className="btn form-btn">Hire Me</div>
-                <div className="btn form-btn clash">Download CV</div>
+                <div className="btn form-btn clash">
+                  <NavLink href={CV} download="Ajayi Michael Olatunbosun CV">
+                    Download CV
+                  </NavLink>
+                </div>
               </div>
             </div>
           </Container>

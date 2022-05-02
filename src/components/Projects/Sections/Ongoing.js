@@ -1,55 +1,35 @@
-import { NavLink } from "react-bootstrap-v5";
-import * as BsIcons from "react-icons/bs";
+// Ongoing Thumbs
+import LaPortfolioThumb from "../project-images/la-portfolio.png";
+import GymWitThumb from "../project-images/gym-witness.png";
+import ChefThumb from "../project-images/chef-palace.jpg";
 
-function Ongoing({ prop }) {
-  return (
-    <div id="ongoing" className="latest-card">
-      <h2>Ongoing Projects</h2>
-      <h5>A little progress each day adds up to big results.</h5>
-      <div className="card-container">
-        {prop.OngoingProject.map((i, index) => {
-          return (
-            <div key={index + 1} className="project-card">
-              <div className="image">
-                <img src={i.image} alt={i.imageAlt} />
-                <NavLink href={i.url} target="_blank">
-                  <div className="image-gradient">
-                    <BsIcons.BsGlobe2 size="3rem" />
-                  </div>
-                </NavLink>
-              </div>
-              <div className="card-title">
-                <h5>{i.name}</h5>
-                <hr />
-              </div>
-              <div className="card-info">
-                {i.about}
-                <h5>STACK</h5>
-                <hr />
-                <div className="stacks">
-                  {i.stack.map((key, id) => {
-                    return (
-                      <div key={id} className="stack-tag">
-                        {key.tag}
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="utility">
-                  <div className="btn form-btn pro-btn">Code</div>
-                  <div className="btn form-btn clash">
-                    <NavLink href={i.url} target="_blank">
-                      Live Demo
-                    </NavLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-export default Ongoing;
+// Ongoing Projects
+export const OngoingProject = [
+  {
+    image: `${GymWitThumb}`,
+    imageAlt: "An gym training website",
+    to: "../portfolio/error",
+    name: "Gym Witness",
+    about:
+      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+    stack: [{ tag: "CSS" }, { tag: "JavaScript" }, { tag: "HTML" }],
+  },
+  {
+    image: `${ChefThumb}`,
+    imageAlt: "A cooking recipe website",
+    to: "../portfolio/error",
+    name: "The CHEF Palace",
+    about:
+      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+    stack: [{ tag: "React JS" }, { tag: "HTML" }, { tag: "JavaScript" }],
+  },
+  {
+    image: `${LaPortfolioThumb}`,
+    imageAlt: "La Draws Portfolio",
+    to: "../portfolio/error",
+    name: "La Draws Portfolio",
+    about:
+      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+    stack: [{ tag: "CSS" }, { tag: "JavaScript" }, { tag: "React JS" }],
+  },
+];
