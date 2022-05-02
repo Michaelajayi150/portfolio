@@ -16,7 +16,8 @@ function App() {
       <Header />
       <Routes>
         <Route
-          path="/portfolio"
+          path="/"
+          exact
           element={
             <>
               <HeroSection />
@@ -26,8 +27,8 @@ function App() {
             </>
           }
         />
-        <Route path="/portfolio/projects" element={<ProjectSection />} />
-        <Route path="/portfolio/error" element={<Error />} />
+        <Route path="/projects" element={<ProjectSection />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
       <Footer />
     </div>
