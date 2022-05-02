@@ -38,17 +38,19 @@ function Header() {
               <Nav.Link href="/portfolio/#project">Services</Nav.Link>
               <Nav.Link href="/portfolio/#contact">Contact</Nav.Link>
               <NavDropdown title="Project" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
+                <NavDropdown.Item href="/portfolio/projects/#latest">
+                  Recent Projects
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
+                <NavDropdown.Item href="/portfolio/projects/#ongoing">
+                  Ongoing Projects
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
+                <NavDropdown.Item href="/portfolio/projects/#static">
+                  Snippets
+                </NavDropdown.Item>
+                {/* <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Separated link
-                </NavDropdown.Item>
+                </NavDropdown.Item> */}
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

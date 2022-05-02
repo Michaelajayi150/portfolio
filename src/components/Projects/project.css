@@ -70,6 +70,10 @@
   color: #fff;
 }
 
+.project-hero .form-btn:hover {
+  background-color: #fff;
+}
+
 .form-btn.pro-btn {
   margin-left: 0;
 }
@@ -114,6 +118,11 @@
   cursor: pointer;
 }
 
+.project-card .image .nav-link {
+  display: inherit;
+  padding: 0;
+
+}
 .project-card .image {
   position: relative;
   margin-bottom: 6px;

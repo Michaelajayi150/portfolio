@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Container } from "react-bootstrap-v5";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import bgImage from "./bg-one.jpg";
+import bgImage from "./project-images/bg-one.jpg";
 import "./project.css";
 import { ProjectInfo } from "./ProjectInfo";
 
@@ -48,7 +48,7 @@ function Project() {
           <p>
             Beautiful sites with code simplicity <br /> You'd love it.
           </p>
-          <Link to="projects">
+          <Link to="projects/#hero">
             <span className="btn check-project">Check Out Some</span>
           </Link>
         </div>
