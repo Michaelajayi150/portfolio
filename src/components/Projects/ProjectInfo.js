@@ -13,7 +13,7 @@ export const ProjectInfo = [
     ProjectItem: [
       {
         item: LatestProject,
-        name: "lastest",
+        name: "latest",
         heading: "Recent Projects",
         quote: "Excellence is not a skill, it's an attitude.",
       },

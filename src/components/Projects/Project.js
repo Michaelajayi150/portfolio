@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Container } from "react-bootstrap-v5";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
+import ScrollIntoView from "react-scroll-into-view";
 import bgImage from "./project-images/bg-one.jpg";
 import "./project.css";
 import { ProjectInfo } from "./ProjectInfo";
@@ -48,8 +49,10 @@ function Project() {
           <p>
             Beautiful sites with code simplicity <br /> You'd love it.
           </p>
-          <Link to="projects">
-            <span className="btn check-project">Check Out Some</span>
+          <Link to={{ pathname: "projects/", hash: "#hero" }}>
+            <ScrollIntoView selector="#hero" className="btn check-project">
+              Check Out Some
+            </ScrollIntoView>
           </Link>
         </div>
       </Container>
