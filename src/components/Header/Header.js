@@ -4,6 +4,7 @@ import * as FiIcons from "react-icons/fi";
 import * as DiIcons from "react-icons/di";
 import "./header.css";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap-v5";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -24,29 +25,52 @@ function Header() {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand href="/portfolio/#home">
+          <Link className="navbar-brand" to="/">
             <DiIcons.DiCssdeck size="3rem" /> <h1>DEV.IO</h1>
-          </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
             id="responsive-navbar-nav"
             className="justify-content-end"
           >
             <Nav className="me-2">
-              <Nav.Link href="/portfolio/#home">Home</Nav.Link>
-              <Nav.Link href="/portfolio/#skill">About</Nav.Link>
-              <Nav.Link href="/portfolio/#project">Services</Nav.Link>
-              <Nav.Link href="/portfolio/#contact">Contact</Nav.Link>
+              <Link className="nav-link" to={{ pathname: "/", hash: "#home" }}>
+                Home
+              </Link>
+              <Link className="nav-link" to={{ pathname: "/", hash: "#skill" }}>
+                About
+              </Link>
+              <Link
+                className="nav-link"
+                to={{ pathname: "/", hash: "#projects" }}
+              >
+                Services
+              </Link>
+              <Link
+                className="nav-link"
+                to={{ pathname: "/", hash: "#contact" }}
+              >
+                Contact
+              </Link>
               <NavDropdown title="Project" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="/portfolio/projects/#latest">
+                <Link
+                  className="dropdown-item"
+                  to={{ pathname: "/projects/", hash: "#latest" }}
+                >
                   Recent Projects
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/portfolio/projects/#ongoing">
+                </Link>
+                <Link
+                  className="dropdown-item"
+                  to={{ pathname: "/projects/", hash: "#ongoing" }}
+                >
                   Ongoing Projects
-                </NavDropdown.Item>
-                <NavDropdown.Item href="/portfolio/projects/#static">
+                </Link>
+                <Link
+                  className="dropdown-item"
+                  to={{ pathname: "/projects/", hash: "#static" }}
+                >
                   Snippets
-                </NavDropdown.Item>
+                </Link>
                 {/* <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Separated link

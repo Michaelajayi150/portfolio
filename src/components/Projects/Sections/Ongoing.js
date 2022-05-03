@@ -8,7 +8,7 @@ export const OngoingProject = [
   {
     image: `${GymWitThumb}`,
     imageAlt: "An gym training website",
-    to: "../portfolio/error",
+    to: "/error",
     name: "Gym Witness",
     about:
       "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
@@ -17,7 +17,7 @@ export const OngoingProject = [
   {
     image: `${ChefThumb}`,
     imageAlt: "A cooking recipe website",
-    to: "../portfolio/error",
+    to: "/error",
     name: "The CHEF Palace",
     about:
       "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
@@ -26,7 +26,7 @@ export const OngoingProject = [
   {
     image: `${LaPortfolioThumb}`,
     imageAlt: "La Draws Portfolio",
-    to: "../portfolio/error",
+    to: "/error",
     name: "La Draws Portfolio",
     about:
       "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
