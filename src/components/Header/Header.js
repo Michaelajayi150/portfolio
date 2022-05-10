@@ -35,58 +35,27 @@ function Header() {
             className="justify-content-end"
           >
             <Nav className="me-2">
-              <ScrollIntoView selector="#home">
-                <Link
-                  className="nav-link"
-                  to={{ pathname: "/", hash: "#home" }}
-                >
-                  Home
-                </Link>
-              </ScrollIntoView>
-              <ScrollIntoView selector="#skill">
-                <Link
-                  className="nav-link"
-                  to={{ pathname: "/", hash: "#skill" }}
-                >
-                  About
-                </Link>
-              </ScrollIntoView>
-              <ScrollIntoView selector="#project">
-                <Link
-                  className="nav-link"
-                  to={{ pathname: "/", hash: "#project" }}
-                >
-                  Services
-                </Link>
-              </ScrollIntoView>
-              <Link
-                className="nav-link"
-                to={{ pathname: "/", hash: "#contact" }}
-              >
+              <Link className="nav-link" to={{ pathname: "/" }}>
+                <ScrollIntoView selector="#home">Home</ScrollIntoView>
+              </Link>
+              <Link className="nav-link" to={{ pathname: "/" }}>
+                <ScrollIntoView selector="#skill">About</ScrollIntoView>
+              </Link>
+              <Link className="nav-link" to={{ pathname: "/" }}>
+                <ScrollIntoView selector="#project">Services</ScrollIntoView>
+              </Link>
+              <Link className="nav-link" to={{ pathname: "/" }}>
                 <ScrollIntoView selector="#contact">Contact</ScrollIntoView>
               </Link>
               <NavDropdown title="Project" id="collasible-nav-dropdown">
-                <Link
-                  className="dropdown-item"
-                  to={{ pathname: "/projects/", hash: "#latest" }}
-                >
-                  <ScrollIntoView selector="#latest">
-                    Recent Projects
-                  </ScrollIntoView>
+                <Link className="dropdown-item" to={{ pathname: "/projects/" }}>
+                  Recent Projects
                 </Link>
-                <Link
-                  className="dropdown-item"
-                  to={{ pathname: "/projects/", hash: "#ongoing" }}
-                >
-                  <ScrollIntoView selector="#ongoing">
-                    Ongoing Projects
-                  </ScrollIntoView>
+                <Link className="dropdown-item" to={{ pathname: "/projects/" }}>
+                  Ongoing Projects
                 </Link>
-                <Link
-                  className="dropdown-item"
-                  to={{ pathname: "/projects/", hash: "#static" }}
-                >
-                  <ScrollIntoView selector="#static">Snippets</ScrollIntoView>
+                <Link className="dropdown-item" to={{ pathname: "/projects/" }}>
+                  Snippets
                 </Link>
                 {/* <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">

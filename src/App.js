@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import ProjectSection from "./components/Projects/ProjectSection";
 import Error from "./components/Error/Error";
+import Animation from "./components/Animation.tsx";
 
 function App() {
   return (
@@ -23,13 +24,14 @@ function App() {
               <HeroSection />
               <About />
               <Project />
+              <ProjectSection />
               <Contact />
             </>
           }
         />
-        <Route path="/projects" element={<ProjectSection />} />
         <Route path="/error" element={<Error />} />
       </Routes>
+      <Animation />
       <Footer />
     </div>
   );

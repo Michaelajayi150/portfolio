@@ -1,18 +1,42 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Exed = ({ keyProp }) => {
+const Exed = ({ keyProp, status }) => {
+  const exedVariants = {
+    offscreen: {
+      opacity: 0,
+      visibility: "hidden",
+    },
+    onscreen: {
+      opacity: 1,
+      visibility: "visible",
+      transition: {
+        type: "spring",
+        bounce: 0.2,
+        duration: 3,
+      },
+    },
+  };
+
   return (
     <>
       {keyProp.map((key, index) => {
         return (
-          <div key={index + 1} className="exed-data-item">
+          <motion.div
+            initial="offscreen"
+            whileInView={status ? "onscreen" : null}
+            key={index + 1}
+            className="exed-data-item"
+          >
             <span></span>
-            <div className="exed-date">{key.year}</div>
-            <div className="exed-info">
+            <motion.div variants={exedVariants} className="exed-date">
+              {key.year}
+            </motion.div>
+            <motion.div variants={exedVariants} className="exed-info">
               <h1>{key.company}</h1>
               <p>{key.info}</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         );
       })}
     </>

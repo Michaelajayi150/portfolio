@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.1.3",
+    "framer-motion-3d": "^6.3.3",
     "git": "^0.1.5",
     "react": "^18.0.0",
     "react-bootstrap": "^2.3.0",
@@ -18,6 +19,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-scroll-into-view": "^1.12.0",
+    "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

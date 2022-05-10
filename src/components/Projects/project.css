@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
   text-transform: uppercase;
   position: relative;
   background-size: cover;
@@ -40,7 +39,7 @@
 .project-card-section .project-bg {
   width: 100%;
   filter: blur(2px);
-  height: calc(50vh + 40px + 125px);
+  height: calc(50vh);
   position: absolute;
   top: 0;
   z-index: 1;
@@ -121,8 +120,8 @@
 .project-card .image .nav-link {
   display: inherit;
   padding: 0;
-
 }
+
 .project-card .image {
   position: relative;
   margin-bottom: 6px;
@@ -161,6 +160,9 @@
   margin: 0;
 }
 
+.relative {
+  position: relative;
+}
 
 
 @media screen and (min-width: 768px) {

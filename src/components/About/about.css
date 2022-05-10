@@ -16,6 +16,11 @@
   text-transform: uppercase;
 }
 
+.about-content {
+  position: relative;
+  overflow: hidden;
+}
+
 .about-content .about-cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -109,6 +114,8 @@
 .about-skills.animate .skill-0 .skill-range-item.full {
   animation: skill 5s;
   animation-fill-mode: forwards;
+  animation-delay: 1s;
+  transform: rotate(0);
 }
 @keyframes skill {
   0% {
@@ -120,6 +127,8 @@
 .about-skills.animate .skill-1 .skill-range-item.full { /* Skill 1 */
   animation: skilla 5s;
   animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  transform: rotate(0);
 }
 @keyframes skilla {
   0% {
@@ -131,6 +140,8 @@
 .about-skills.animate .skill-2 .skill-range-item.full { /* Skill 2 */
   animation: skillb 5s;
   animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  transform: rotate(0);
 }
 @keyframes skillb {
   0% {
@@ -142,6 +153,8 @@
 .about-skills.animate .skill-3 .skill-range-item.full { /* Skill 3 */
   animation: skillc 5s;
   animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  transform: rotate(0);
 }
 @keyframes skillc {
   0% {
@@ -153,6 +166,8 @@
 .about-skills.animate .skill-4 .skill-range-item.full { /* Skill 4 */
   animation: skilld 5s;
   animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  transform: rotate(0);
 }
 @keyframes skilld {
   0% {
@@ -185,6 +200,7 @@
   border-radius: 7px;
   font-weight: 400;
   font-size: 13px;
+  cursor: pointer;
 }
 .about-exed .about-exed-control span.active {
   color: #000;

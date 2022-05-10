@@ -1,5 +1,4 @@
-import { Container, NavLink } from "react-bootstrap-v5";
-import bgImage2 from "./project-images/bg-project.jpeg";
+import { Container } from "react-bootstrap-v5";
 import "./project.css";
 import { ProjectInfo } from "./ProjectInfo";
 import ProjectSectionItem from "./ProjectSectionItem";
@@ -9,21 +8,10 @@ function ProjectSection() {
     <div className="project-card-section">
       {ProjectInfo.map((key, i) => {
         return (
-          <div key={i}>
-            <div
-              className="project-bg"
-              style={{ backgroundImage: `url(${bgImage2})` }}
-            ></div>
+          <div className="relative" key={i}>
             <Container>
-              <div id="hero" className="project-hero">
-                <h1>Welcome to My Projects</h1>
-                <p>I build awesome websites with simple code</p>
-                <div className="btn form-btn pro-btn">
-                  <NavLink href="#latest">Get Started</NavLink>
-                </div>
-              </div>
-              {key.ProjectItem.map((item) => {
-                return <ProjectSectionItem prop={item} />;
+              {key.ProjectItem.map((item, index) => {
+                return <ProjectSectionItem key={index} prop={item} />;
               })}
             </Container>
           </div>

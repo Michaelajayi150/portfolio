@@ -1,25 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap-v5";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import ScrollIntoView from "react-scroll-into-view";
-import bgImage from "./project-images/bg-one.jpg";
+import styled from "styled-components";
+import { keyframes } from "styled-components";
+import { motion, Variants } from "framer-motion";
 import "./project.css";
 import { ProjectInfo } from "./ProjectInfo";
 
 function Project() {
-  const { ref, inView, entry } = useInView();
+  const [words, setWords] = useState("Interactive");
+  const [wordCount, setCount] = useState(0);
+  const { ref, inView } = useInView();
 
-  const TimeAnimation = (time) => {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  };
-  const LoopText = async () => {
-    for (let i = 0; i < 3; i++) {
-      await TimeAnimation(2000);
-      entry.target.innerHTML = ProjectInfo.map((key) => {
-        return key.Features[i].text;
-      });
-    }
+  const LoopText = () => {
+    setTimeout(() => {
+      setCount(wordCount + 1);
+      if (wordCount >= 2) {
+        setCount(0);
+      }
+    }, 6000);
+
+    ProjectInfo.map((item) => {
+      return setTimeout(() => {
+        if (wordCount === 0) {
+          setWords(`${item.Features[0].text}`);
+        } else if (wordCount === 1) {
+          setWords(`${item.Features[1].text}`);
+        } else if (wordCount === 2) {
+          setWords(`${item.Features[2].text}`);
+        }
+      }, 6000);
+    });
+
+    const Arr = words.split("");
+    return (
+      <span>
+        {Arr.map((item, index) => {
+          return <span key={index}>{item}</span>;
+        })}
+      </span>
+    );
   };
 
   useEffect(() => {
@@ -28,36 +50,107 @@ function Project() {
     }
   });
 
+  const cardVariants = {
+    offscreen: {
+      y: 300,
+      opacity: 0,
+    },
+    onscreen: {
+      y: 50,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 2,
+      },
+    },
+  };
+
   return (
-    <div
+    <motion.div
       id="project"
       className="project-section"
-      style={{
-        backgroundImage: `url(${bgImage}), linear-gradient(45deg, #eb01a5, #d13531)`,
-      }}
+      initial="offscreen"
+      whileInView="onscreen"
     >
       <Container>
-        <div className="project-content">
+        <motion.div className="project-content" variants={cardVariants}>
           <h1 className="text-content">
             I create{" "}
-            <span className="text-comment" ref={ref}>
-              Responsive
-            </span>{" "}
+            <Wrapper className="text-comment" ref={ref}>
+              <LoopText />
+            </Wrapper>{" "}
             <br />
             Web Site and Application
           </h1>
           <p>
             Beautiful sites with code simplicity <br /> You'd love it.
           </p>
-          <Link to={{ pathname: "projects/", hash: "#hero" }}>
-            <ScrollIntoView selector="#hero" className="btn check-project">
+          <Link to={{ pathname: "/", hash: "#latest" }}>
+            <ScrollIntoView
+              selector="#latest"
+              className="form-btn check-project"
+            >
               Check Out Some
             </ScrollIntoView>
           </Link>
-        </div>
+        </motion.div>
       </Container>
-    </div>
+    </motion.div>
   );
 }
 
 export default Project;
+
+const animation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) skewY(10deg) skewX(10deg) rotateZ(30deg);
+    filter: blur(10px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0px) skewY(0deg) skewX(0deg) rotateZ(0deg);
+    filter: blur(0px);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(0px) skewY(0deg) skewX(0deg) rotateZ(0deg);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) skewY(10deg) skewX(10deg) rotateZ(30deg);
+    filter: blur(10px);
+  }
+`;
+
+const Wrapper = styled.span`
+  display: inline-block;
+
+  span span {
+    display: inline-block;
+    opacity: 0;
+    animation-name: ${animation};
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  ${Css()}
+`;
+
+function Css() {
+  let styles = `
+    `;
+
+  for (let i = 0; i < 14; i++) {
+    styles += `
+      span span:nth-child(${i}) {
+      animation-delay: calc(0.1s * (${i} +1));
+    }
+  `;
+  }
+
+  return styles;
+}

@@ -3,12 +3,18 @@ import { Container } from "react-bootstrap-v5";
 import { useInView } from "react-intersection-observer";
 import "./about.css";
 import { AboutData } from "./AboutInfo";
+import { motion } from "framer-motion";
 import Exed from "./Exed";
-// import BgImage from "./bg-one.jpg";
+import {
+  cardVariants,
+  contentVariants,
+  skillVariants,
+} from "./AnimationVariant";
 
 function About() {
-  const [Experience, Setexperience] = useState("ex active");
-  const [Education, Seteducation] = useState("ed");
+  const [Experience, Setexperience] = useState("ex");
+  const [Education, Seteducation] = useState("ed active");
+  const [status, setStatus] = useState(true);
   const [Animate, Setanimate] = useState("about-skills");
   const { ref, inView } = useInView();
 
@@ -24,6 +30,10 @@ function About() {
     if (Experience.includes("active")) {
       Setexperience("ex");
       Seteducation("ed active");
+      setStatus(false);
+      setTimeout(() => {
+        setStatus(true);
+      }, 300);
     }
   };
 
@@ -32,36 +42,60 @@ function About() {
       Setexperience("ex active");
       Seteducation("ed");
     }
+    setStatus(false);
+    setTimeout(() => {
+      setStatus(true);
+    }, 300);
   };
 
   return (
     <>
-      {AboutData.map((key) => {
+      {AboutData.map((key, index) => {
         return (
-          <div id="skill" className="about-section">
-            <div className="about-container">
+          <div id="skill" key={index} className="about-section">
+            <motion.div
+              className="about-container"
+              initial="offscreen"
+              whileInView="onscreen"
+            >
               <Container>
-                <div className="about-content">
-                  <div className="text-lg">
+                <motion.div
+                  className="about-content"
+                  initial="offscreen"
+                  whileInView="onscreen"
+                >
+                  <motion.div className="text-lg" variants={contentVariants}>
                     <div className="about-text">
                       <h1 className="section-topic">About Myself</h1>
                       <p className="about-p">{key.aboutText}</p>
                     </div>
 
-                    <div className="about-cards">
+                    <motion.div
+                      className="about-cards"
+                      initial="offscreen"
+                      whileInView="onscreen"
+                    >
                       {key.aboutTag.map((cardItem, index) => {
                         return (
-                          <div key={index + 1} className="about-card-item">
+                          <motion.div
+                            key={index + 1}
+                            className="about-card-item"
+                            variants={cardVariants}
+                          >
                             {cardItem.icon}
                             <b>{cardItem.text}</b>
                             <p>{cardItem.info}</p>
-                          </div>
+                          </motion.div>
                         );
                       })}
-                    </div>
-                  </div>
+                    </motion.div>
+                  </motion.div>
 
-                  <div ref={ref} className={Animate}>
+                  <motion.div
+                    ref={ref}
+                    className={Animate}
+                    variants={skillVariants}
+                  >
                     {key.aboutSkill.map((cardItem, index) => {
                       return (
                         <div
@@ -81,10 +115,10 @@ function About() {
                         </div>
                       );
                     })}
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               </Container>
-            </div>
+            </motion.div>
 
             <div className="about-exed">
               <Container>
@@ -103,9 +137,9 @@ function About() {
 
                 <div className="exed-data">
                   {Experience.includes("active") ? (
-                    <Exed keyProp={key.Experiences} />
+                    <Exed keyProp={key.Experiences} status={status} />
                   ) : (
-                    <Exed keyProp={key.Education} />
+                    <Exed keyProp={key.Education} status={status} />
                   )}
                 </div>
               </Container>
