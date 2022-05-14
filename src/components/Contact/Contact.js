@@ -2,31 +2,19 @@ import React from "react";
 import { Container } from "react-bootstrap-v5";
 import { motion } from "framer-motion";
 import "./contact.css";
+import { sectionVariants } from "../Animation";
 
 function Contact() {
-  const contentVariants = {
-    offscreen: {
-      opacity: 0.2,
-    },
-    onscreen: {
-      opacity: 1,
-      transition: {
-        type: "spring",
-        bounce: 0.2,
-        duration: 3,
-      },
-    },
-  };
-
   return (
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
+      viewport={{ once: true, amount: 0.7 }}
       id="contact"
       className="contact-section"
     >
       <Container>
-        <motion.div variants={contentVariants} className="contact-container">
+        <motion.div variants={sectionVariants} className="contact-container">
           <hgroup className="text-content-header">
             <h3 className="section-topic">Contact Me</h3>
             <h1 className="section-topic">Have a Project?</h1>

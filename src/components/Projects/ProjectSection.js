@@ -2,27 +2,14 @@ import { NavLink } from "react-bootstrap-v5";
 import * as BsIcons from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { sectionVariants } from "../Animation";
 
 function ProjectSection({ prop }) {
-  const cardVariants = {
-    offscreen: {
-      opacity: 0,
-    },
-    onscreen: {
-      opacity: 1,
-      transition: {
-        type: "spring",
-        bounce: 0.4,
-        duration: 2,
-      },
-    },
-  };
-
   return (
     <div id={prop.name} className="latest-card">
       <h2>{prop.heading}</h2>
       <h5>{prop.quote}</h5>
-      <motion.div className="card-container">
+      <div className="card-container">
         {prop.item.map((i, index) => {
           return (
             <motion.div
@@ -30,8 +17,9 @@ function ProjectSection({ prop }) {
               className="project-card"
               initial="offscreen"
               whileInView="onscreen"
+              viewport={{ once: true, amount: 0.7 }}
             >
-              <motion.div variants={cardVariants}>
+              <motion.div variants={sectionVariants}>
                 <div className="image">
                   <img src={i.image} alt={i.imageAlt} />
                   {i.to ? (
@@ -78,7 +66,7 @@ function ProjectSection({ prop }) {
             </motion.div>
           );
         })}
-      </motion.div>
+      </div>
     </div>
   );
 }

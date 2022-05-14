@@ -53,6 +53,7 @@ function About() {
               className="about-container"
               initial="offscreen"
               whileInView="onscreen"
+              viewport={{ once: true, amount: 0.7 }}
             >
               <Container>
                 <motion.div
@@ -66,25 +67,27 @@ function About() {
                       <p className="about-p">{key.aboutText}</p>
                     </div>
 
-                    <motion.div
-                      className="about-cards"
-                      initial="offscreen"
-                      whileInView="onscreen"
-                    >
+                    <div className="about-cards">
                       {key.aboutTag.map((cardItem, index) => {
                         return (
                           <motion.div
-                            key={index + 1}
-                            className="about-card-item"
-                            variants={cardVariants}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            viewport={{ once: true, amount: 0.7 }}
                           >
-                            {cardItem.icon}
-                            <b>{cardItem.text}</b>
-                            <p>{cardItem.info}</p>
+                            <motion.div
+                              key={index + 1}
+                              className="about-card-item"
+                              variants={cardVariants}
+                            >
+                              {cardItem.icon}
+                              <b>{cardItem.text}</b>
+                              <p>{cardItem.info}</p>
+                            </motion.div>
                           </motion.div>
                         );
                       })}
-                    </motion.div>
+                    </div>
                   </motion.div>
 
                   <motion.div

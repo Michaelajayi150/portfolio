@@ -1,6 +1,6 @@
 export const contentVariants = {
   offscreen: {
-    x: -300,
+    x: -100,
     opacity: 0,
   },
   onscreen: {
@@ -8,7 +8,6 @@ export const contentVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      bounce: 0.2,
       duration: 3,
     },
   },
@@ -16,7 +15,7 @@ export const contentVariants = {
 
 export const cardVariants = {
   offscreen: {
-    y: 300,
+    y: 100,
     opacity: 0,
   },
   onscreen: {
@@ -24,7 +23,6 @@ export const cardVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      bounce: 0.2,
       duration: 1,
     },
   },
@@ -42,8 +40,22 @@ export const skillVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      bounce: 0.2,
       duration: 1,
+    },
+  },
+};
+
+export const sectionVariants = {
+  offscreen: {
+    opacity: 0.1,
+    visibility: "hidden",
+  },
+  onscreen: {
+    opacity: 1,
+    visibility: "visible",
+    transition: {
+      type: "spring",
+      duration: 3,
     },
   },
 };

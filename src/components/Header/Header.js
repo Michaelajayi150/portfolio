@@ -1,20 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as BsIcons from "react-icons/bs";
 import * as FiIcons from "react-icons/fi";
-import * as DiIcons from "react-icons/di";
+import * as RiIcons from "react-icons/ri";
 import "./header.css";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap-v5";
-import { Link } from "react-router-dom";
+import { Container, Nav, Navbar } from "react-bootstrap-v5";
+import { Link, useLocation } from "react-router-dom";
 import ScrollIntoView from "react-scroll-into-view";
+import { Links } from "./LinkData";
+import Menu from "./Menu";
 
 function Header() {
   const [scrollPos, setScrollPos] = useState(0);
+  const [menu, setMenu] = useState("me-2");
+  const [isOpen, setIsOpen] = useState(false);
   const HandleScroll = () => {
     const pos = window.pageYOffset;
     setScrollPos(pos);
   };
 
   window.addEventListener("scroll", HandleScroll);
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setMenu("me-2");
+    } else {
+      setMenu("d-none");
+    }
+  }, [location]);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <>
@@ -26,42 +43,28 @@ function Header() {
         variant="dark"
       >
         <Container>
-          <Link className="navbar-brand" to="/">
-            <DiIcons.DiCssdeck size="3rem" /> <h1>DEV.IO</h1>
+          <Link className="navbar-brand" to={{ pathname: "/", hash: "" }}>
+            <ScrollIntoView selector="#home">
+              <h1>DEV.IO</h1>
+            </ScrollIntoView>
           </Link>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <div className="navbar-toggler">
+            {isOpen ? (
+              <RiIcons.RiMenu4Line onClick={toggle} size="2rem" />
+            ) : (
+              <RiIcons.RiMenu3Line onClick={toggle} size="2rem" />
+            )}
+          </div>
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            className="justify-content-end"
+            className={
+              !isOpen ? "justify-content-end" : "justify-content-end show"
+            }
           >
-            <Nav className="me-2">
-              <Link className="nav-link" to={{ pathname: "/" }}>
-                <ScrollIntoView selector="#home">Home</ScrollIntoView>
-              </Link>
-              <Link className="nav-link" to={{ pathname: "/" }}>
-                <ScrollIntoView selector="#skill">About</ScrollIntoView>
-              </Link>
-              <Link className="nav-link" to={{ pathname: "/" }}>
-                <ScrollIntoView selector="#project">Services</ScrollIntoView>
-              </Link>
-              <Link className="nav-link" to={{ pathname: "/" }}>
-                <ScrollIntoView selector="#contact">Contact</ScrollIntoView>
-              </Link>
-              <NavDropdown title="Project" id="collasible-nav-dropdown">
-                <Link className="dropdown-item" to={{ pathname: "/" }}>
-                  <ScrollIntoView selector="#latest">
-                    Recent Projects
-                  </ScrollIntoView>
-                </Link>
-                <Link className="dropdown-item" to={{ pathname: "/" }}>
-                  <ScrollIntoView selector="#ongoing">
-                    Ongoing Projects
-                  </ScrollIntoView>
-                </Link>
-                <Link className="dropdown-item" to={{ pathname: "/" }}>
-                  <ScrollIntoView selector="#static">Snippets</ScrollIntoView>
-                </Link>
-              </NavDropdown>
+            <Nav className={menu}>
+              {Links.map((item, index) => {
+                return <Menu item={item} toggle={toggle} key={index} />;
+              })}
             </Nav>
           </Navbar.Collapse>
         </Container>
