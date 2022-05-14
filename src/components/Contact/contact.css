@@ -48,6 +48,6 @@
 }
 
 .form-btn:hover {
+  background-color: #fff;
   color: #000;
-  background-color: transparent;
 }

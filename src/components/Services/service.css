@@ -1,0 +1,34 @@
+.project-section {
+  position: relative;
+  height: 80vh;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.project-section .text-content .text-comment {
+  color: rgb(255, 40, 40);
+}
+
+.project-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-section .btn {
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.4s ease-in;
+}
+
+.check-project {
+  margin-top: 30px;
+}
+
+.check-project:hover {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 4px 6px 8px rgba(117, 117, 248, 0.3);
+}

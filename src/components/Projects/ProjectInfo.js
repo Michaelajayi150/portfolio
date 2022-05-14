@@ -1,15 +1,9 @@
 import { OngoingProject } from "./Sections/Ongoing";
 import { LatestProject } from "./Sections/Recent";
 import { StaticProject } from "./Sections/Static";
-// Use CSS Grid, Flex will spoil your work ooo
 
 export const ProjectInfo = [
   {
-    Features: [
-      { text: "Interactive" },
-      { text: "User-Friendly" },
-      { text: "Responsive" },
-    ],
     ProjectItem: [
       {
         item: LatestProject,

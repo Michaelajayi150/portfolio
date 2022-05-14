@@ -44,11 +44,28 @@
   transform: translateY(4px);
 }
 
+#home {
+  position: relative;
+  z-index: 2;
+}
+
 @media screen and (min-width: 768px) {
   .navbar-expand .header-contact.navbar-nav {
     font-size: 22px;
     position: relative;
     z-index: 2;
+  }
+
+  #home {
+    position: static;
+  }
+  
+  .navbar-light .header-contact.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .navbar-light .header-contact.navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.5);
   }
 }
 

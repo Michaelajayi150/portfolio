@@ -6,11 +6,9 @@ import "./contact.css";
 function Contact() {
   const contentVariants = {
     offscreen: {
-      x: -300,
-      opacity: 0,
+      opacity: 0.2,
     },
     onscreen: {
-      x: 0,
       opacity: 1,
       transition: {
         type: "spring",

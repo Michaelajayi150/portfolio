@@ -3,13 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
 import HeroSection from "./components/Hero/HeroSection";
 import About from "./components/About/About";
-import Project from "./components/Projects/Project";
+import Service from "./components/Services/Service";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { Route, Routes } from "react-router-dom";
-import ProjectSection from "./components/Projects/ProjectSection";
+import Project from "./components/Projects/Project";
 import Error from "./components/Error/Error";
-import Animation from "./components/Animation.tsx";
 
 function App() {
   return (
@@ -23,15 +22,14 @@ function App() {
             <>
               <HeroSection />
               <About />
+              <Service />
               <Project />
-              <ProjectSection />
               <Contact />
             </>
           }
         />
-        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-      <Animation />
       <Footer />
     </div>
   );

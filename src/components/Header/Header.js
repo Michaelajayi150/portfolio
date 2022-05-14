@@ -48,19 +48,19 @@ function Header() {
                 <ScrollIntoView selector="#contact">Contact</ScrollIntoView>
               </Link>
               <NavDropdown title="Project" id="collasible-nav-dropdown">
-                <Link className="dropdown-item" to={{ pathname: "/projects/" }}>
-                  Recent Projects
+                <Link className="dropdown-item" to={{ pathname: "/" }}>
+                  <ScrollIntoView selector="#latest">
+                    Recent Projects
+                  </ScrollIntoView>
                 </Link>
-                <Link className="dropdown-item" to={{ pathname: "/projects/" }}>
-                  Ongoing Projects
+                <Link className="dropdown-item" to={{ pathname: "/" }}>
+                  <ScrollIntoView selector="#ongoing">
+                    Ongoing Projects
+                  </ScrollIntoView>
                 </Link>
-                <Link className="dropdown-item" to={{ pathname: "/projects/" }}>
-                  Snippets
+                <Link className="dropdown-item" to={{ pathname: "/" }}>
+                  <ScrollIntoView selector="#static">Snippets</ScrollIntoView>
                 </Link>
-                {/* <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item> */}
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

@@ -5,11 +5,7 @@ import "./about.css";
 import { AboutData } from "./AboutInfo";
 import { motion } from "framer-motion";
 import Exed from "./Exed";
-import {
-  cardVariants,
-  contentVariants,
-  skillVariants,
-} from "./AnimationVariant";
+import { cardVariants, contentVariants, skillVariants } from "../Animation";
 
 function About() {
   const [Experience, Setexperience] = useState("ex");

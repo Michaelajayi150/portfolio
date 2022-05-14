@@ -33,7 +33,7 @@ export const cardVariants = {
 export const skillVariants = {
   offscreen: {
     position: "absolute",
-    x: 300,
+    x: 100,
     opacity: 0,
   },
   onscreen: {
