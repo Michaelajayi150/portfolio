@@ -53,14 +53,25 @@ function ProjectSection({ prop }) {
                       );
                     })}
                   </div>
-                  <div className="utility">
-                    <div className="btn form-btn pro-btn">Code</div>
-                    <div className="btn form-btn clash">
+                  {i.to ? (
+                    <div className="utility">
+                      <Link to={i.to}>
+                        <div className="btn form-btn pro-btn">Code</div>
+                      </Link>
+                      <Link to={i.to}>
+                        <div className="btn form-btn clash">Live Demo</div>
+                      </Link>
+                    </div>
+                  ) : (
+                    <div className="utility">
+                      <NavLink className="btn" href={i.source}>
+                        <div className="btn form-btn pro-btn">Code</div>
+                      </NavLink>
                       <NavLink href={i.url} target="_blank">
-                        Live Demo
+                        <div className="btn form-btn clash">Live Demo</div>
                       </NavLink>
                     </div>
-                  </div>
+                  )}
                 </div>
               </motion.div>
             </motion.div>

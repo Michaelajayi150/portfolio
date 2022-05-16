@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as BsIcons from "react-icons/bs";
 import * as FiIcons from "react-icons/fi";
 import * as RiIcons from "react-icons/ri";
@@ -6,12 +6,11 @@ import "./header.css";
 import { Container, Nav, Navbar } from "react-bootstrap-v5";
 import { Link, useLocation } from "react-router-dom";
 import ScrollIntoView from "react-scroll-into-view";
-import { Links } from "./LinkData";
+import { Links, Project } from "./LinkData";
 import Menu from "./Menu";
 
 function Header() {
   const [scrollPos, setScrollPos] = useState(0);
-  const [menu, setMenu] = useState("me-2");
   const [isOpen, setIsOpen] = useState(false);
   const HandleScroll = () => {
     const pos = window.pageYOffset;
@@ -21,13 +20,6 @@ function Header() {
   window.addEventListener("scroll", HandleScroll);
 
   const location = useLocation();
-  useEffect(() => {
-    if (location.pathname === "/") {
-      setMenu("me-2");
-    } else {
-      setMenu("d-none");
-    }
-  }, [location]);
 
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -48,23 +40,31 @@ function Header() {
               <h1>DEV.IO</h1>
             </ScrollIntoView>
           </Link>
-          <div className="navbar-toggler">
-            {isOpen ? (
-              <RiIcons.RiMenu4Line onClick={toggle} size="2rem" />
-            ) : (
-              <RiIcons.RiMenu3Line onClick={toggle} size="2rem" />
-            )}
-          </div>
+          {!location.pathname === "/" ? (
+            <div className="navbar-toggler">
+              {isOpen ? (
+                <RiIcons.RiMenu4Line onClick={toggle} size="2rem" />
+              ) : (
+                <RiIcons.RiMenu3Line onClick={toggle} size="2rem" />
+              )}
+            </div>
+          ) : null}
           <Navbar.Collapse
             id="responsive-navbar-nav"
             className={
               !isOpen ? "justify-content-end" : "justify-content-end show"
             }
           >
-            <Nav className={menu}>
-              {Links.map((item, index) => {
-                return <Menu item={item} toggle={toggle} key={index} />;
-              })}
+            <Nav className="me-2">
+              {location.pathname === "/project"
+                ? Project.map((item, index) => {
+                    return <Menu item={item} toggle={toggle} key={index} />;
+                  })
+                : location.pathname === "/"
+                ? Links.map((item, index) => {
+                    return <Menu item={item} toggle={toggle} key={index} />;
+                  })
+                : null}
             </Nav>
           </Navbar.Collapse>
         </Container>

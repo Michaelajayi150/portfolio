@@ -193,9 +193,3 @@ function Css() {
 
   return styles;
 }
-
-/* I am a frontend web developer, I am a React Developer and I
-                    make use of other frameworks and database such as NodeJs,
-                    MongoDB. I specialise in making interactive, responsive web
-                    site and web apps using HTML, CSS and JavaScript. I also
-                    render web hosting services (WEB ADMINISTRATOR). */

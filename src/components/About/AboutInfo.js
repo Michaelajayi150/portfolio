@@ -5,7 +5,7 @@ import * as GrIcons from "react-icons/gr";
 export const AboutData = [
   {
     aboutText:
-      "I was born and raised in Nigeria, I also studied in Nigeria. I love listening to music, playing video games and making techonlogical research. I have been certified by more than four prrogramming institution online (FreeCodeCamp, Pluralsight and Google). I also help the programming community by creating web templates and putting them out for free, I also help other developer in answering question on Stackoverflow and other programming communtity platforms like Slack.",
+      "I am a frontend web developer, I am a React Developer and I make use of other frameworks and database such as NodeJs, MongoDB. I specialise in making interactive, responsive web site and web apps using HTML, CSS and JavaScript. I also render web hosting services (WEB ADMINISTRATOR). I was born and raised in Nigeria, I also studied in Nigeria. I love listening to music, playing video games and making techonlogical research. I have been certified by more than four prrogramming institution online (FreeCodeCamp, Pluralsight and Google). I also help the programming community by creating web templates and putting them out for free, I also help other developer in answering question on Stackoverflow and other programming communtity platforms like Slack.",
 
     aboutTag: [
       {

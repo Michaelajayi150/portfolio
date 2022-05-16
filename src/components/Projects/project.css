@@ -14,7 +14,7 @@
 .project-card-section .container {
   position: relative;
   z-index: 2;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .form-btn.pro-btn {
@@ -27,7 +27,7 @@
 }
 
 .latest-card {
-  padding: 30px 0;
+  padding: 0 0 30px;
 }
 
 .card-container {
@@ -39,6 +39,11 @@
 .project-card {
   position: relative;
   /* padding: 30px 0; */
+}
+
+.nav-link.btn {
+  display: inline !important;
+  padding: 0%;
 }
 
 .project-card .image-gradient {
@@ -69,7 +74,7 @@
 .project-card .image {
   position: relative;
   margin-bottom: 6px;
-  height: 50%;
+  height: 213px;
   max-height: 235px;
 }
 
@@ -113,6 +118,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .project-card-section .container {
+    margin-top: 0px;
   }
 
   .project-card:nth-child(1), .project-card:nth-child(2) {

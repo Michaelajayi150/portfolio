@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
-import ScrollIntoView from "react-scroll-into-view";
 import { motion } from "framer-motion";
 import "./service.css";
 import ServiceAnimation, { Loop } from "./ServiceAnimation";
 import { sectionVariants } from "../Animation";
 
-function Project() {
+function Service({ hero }) {
   const [words, setWords] = useState("Interactive");
   const [wordCount, setCount] = useState(0);
   const { ref, inView } = useInView();
@@ -18,7 +17,7 @@ function Project() {
       if (wordCount >= 2) {
         setCount(0);
       }
-    }, 6000);
+    }, 4500);
 
     const Features = [
       { text: "Interactive" },
@@ -34,7 +33,7 @@ function Project() {
       } else if (wordCount === 2) {
         setWords(`${Features[2].text}`);
       }
-    }, 6000);
+    }, 4500);
 
     const Arr = words.split("");
     return (
@@ -55,7 +54,7 @@ function Project() {
   return (
     <motion.div
       id="service"
-      className="project-section"
+      className={!hero ? "project-section" : `project-section ${hero}`}
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.6 }}
@@ -74,10 +73,8 @@ function Project() {
           Beautiful sites with code simplicity <br /> You'd love it.
         </p>
 
-        <Link to={{ pathname: "/", hash: "#latest" }}>
-          <ScrollIntoView selector="#latest" className="form-btn check-project">
-            Check Out Some
-          </ScrollIntoView>
+        <Link to={{ pathname: "/project" }}>
+          <span className="form-btn check-project">Check Out Some</span>
         </Link>
 
         <ServiceAnimation />
@@ -86,4 +83,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default Service;

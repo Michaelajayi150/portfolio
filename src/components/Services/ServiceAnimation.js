@@ -56,7 +56,7 @@ export const Loop = styled.span`
     display: inline-block;
     opacity: 0;
     animation-name: ${animation};
-    animation-duration: 6s;
+    animation-duration: 4.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);

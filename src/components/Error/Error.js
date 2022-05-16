@@ -1,8 +1,9 @@
 import ErrorImg from "./error.png";
 import "./error.css";
 import { NavLink } from "react-bootstrap-v5";
-import ScrolltoTop from "./ScrolltoTop";
+import ScrolltoTop from "../ScrolltoTop";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Error() {
   const cardVariants = {
@@ -59,6 +60,17 @@ function Error() {
                 TheDev.IO
               </NavLink>
             </p>
+            <div className="text-center">
+              <Link
+                to="/"
+                style={{
+                  textDecoration: "none",
+                }}
+                className="form-btn"
+              >
+                Go To home
+              </Link>
+            </div>
           </div>
         </motion.div>
       </motion.section>

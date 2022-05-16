@@ -11,7 +11,7 @@ export const OngoingProject = [
     to: "/error",
     name: "Gym Witness",
     about:
-      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+      "Working out via online gym classes and tutors. A gyming website to facilitate human strength.",
     stack: [{ tag: "CSS" }, { tag: "JavaScript" }, { tag: "HTML" }],
   },
   {
@@ -20,7 +20,7 @@ export const OngoingProject = [
     to: "/error",
     name: "The CHEF Palace",
     about:
-      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+      "Order your favourite dish from our kitchen. Spicy, Saucy, Hot and Delicious anyhow you want it, WE DELIVER!",
     stack: [{ tag: "React JS" }, { tag: "HTML" }, { tag: "JavaScript" }],
   },
   {
@@ -29,7 +29,7 @@ export const OngoingProject = [
     to: "/error",
     name: "La Draws Portfolio",
     about:
-      "Eu enim sunt fugiat qui officia consectetur ut magna minim commodo qui sit labore. Adipisicing amet cillum proident aliqua irure eu laboris ipsum laboris reprehe nderit nulla eiusmod.",
+      "Get La_Draws awesome painting and brushes for free on his official website.",
     stack: [{ tag: "CSS" }, { tag: "JavaScript" }, { tag: "React JS" }],
   },
 ];

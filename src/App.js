@@ -23,11 +23,11 @@ function App() {
               <HeroSection />
               <About />
               <Service />
-              <Project />
               <Contact />
             </>
           }
         />
+        <Route path="/project" element={<Project />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

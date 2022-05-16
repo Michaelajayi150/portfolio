@@ -8,7 +8,7 @@ export const contentVariants = {
     opacity: 1,
     transition: {
       type: "spring",
-      duration: 3,
+      duration: 1,
     },
   },
 };
@@ -30,7 +30,6 @@ export const cardVariants = {
 
 export const skillVariants = {
   offscreen: {
-    position: "absolute",
     x: 100,
     opacity: 0,
   },
@@ -55,7 +54,7 @@ export const sectionVariants = {
     visibility: "visible",
     transition: {
       type: "spring",
-      duration: 3,
+      duration: 2,
     },
   },
 };

@@ -71,12 +71,12 @@ function About() {
                       {key.aboutTag.map((cardItem, index) => {
                         return (
                           <motion.div
+                            key={index}
                             initial="offscreen"
                             whileInView="onscreen"
                             viewport={{ once: true, amount: 0.7 }}
                           >
                             <motion.div
-                              key={index + 1}
                               className="about-card-item"
                               variants={cardVariants}
                             >
