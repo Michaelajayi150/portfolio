@@ -58,3 +58,27 @@ export const sectionVariants = {
     },
   },
 };
+
+export const PopModal = {
+  offscreen: {
+    opacity: 0,
+    visibility: "hidden",
+  },
+  popIn: {
+    opacity: 1,
+    visibility: "visible",
+    transition: {
+      type: "spring",
+      duration: 2,
+    },
+  },
+
+  popOut: {
+    opacity: 0,
+    visibility: "hidden",
+    transition: {
+      type: "spring",
+      duration: 2,
+    },
+  },
+};

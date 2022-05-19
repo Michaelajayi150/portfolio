@@ -40,7 +40,7 @@ function Header() {
               <h1>DEV.IO</h1>
             </ScrollIntoView>
           </Link>
-          {!location.pathname === "/" ? (
+          {location.pathname === "/" || location.pathname === "/project" ? (
             <div className="navbar-toggler">
               {isOpen ? (
                 <RiIcons.RiMenu4Line onClick={toggle} size="2rem" />

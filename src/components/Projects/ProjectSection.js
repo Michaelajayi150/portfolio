@@ -67,7 +67,7 @@ function ProjectSection({ prop }) {
                       <NavLink className="btn" href={i.source}>
                         <div className="btn form-btn pro-btn">Code</div>
                       </NavLink>
-                      <NavLink href={i.url} target="_blank">
+                      <NavLink className="btn" href={i.url} target="_blank">
                         <div className="btn form-btn clash">Live Demo</div>
                       </NavLink>
                     </div>
