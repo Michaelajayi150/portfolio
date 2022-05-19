@@ -34,6 +34,7 @@ function Contact() {
 
   const handleChange = (inputSpec) => (e) => {
     setForm({ ...Form, [inputSpec]: e.target.value });
+    console.log(state.errors);
   };
 
   return (
@@ -90,6 +91,7 @@ function Contact() {
               name="subject"
               placeholder="Subject"
               value={Form.subject}
+              minLength="10"
               onChange={handleChange("subject")}
               required
             />
@@ -108,6 +110,7 @@ function Contact() {
               placeholder="Message"
               value={Form.message}
               onChange={handleChange("message")}
+              minLength="30"
               required
             />
             {/* Text Message Error */}
